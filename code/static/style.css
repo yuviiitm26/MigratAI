@@ -1,0 +1,110 @@
+/* General Body Styling */
+body {
+    background-color: #808080; /* Medium grey color */
+    color: #665656; /* Optional: Makes text white for contrast */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #275689;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    margin: 0 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1507753679791-0f25f6729cf5?crop=entropy&fit=crop&w=1920&h=1080') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.btn-hero {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #ffca28;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #275689;
+    margin-bottom: 20px;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+

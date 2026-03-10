@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Swach Seva</title>
+    
+    <!-- Bootstrap CSS and custom styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Custom styles for service cards */
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar with custom color -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #275689;">
+        <div class="container">
+            <a class="navbar-brand" href="/">Swach Seva</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Available Services Section -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Our Services</h1>
+        
+        <!-- List of Service Cards -->
+        <div class="row g-4">
+            <!-- AC Repair Service Card -->
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="static/Acrepair.jpg" class="card-img-top" alt="AC Repair">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">AC Repair</h5>
+                        <a href="/login" class="btn btn-outline-primary">Login to Request AC Repair</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Refrigerator Repair Service Card -->
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="static/Refrigerator Repair.jpg" class="card-img-top" alt="Refrigerator Repair">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Refrigerator Repair</h5>
+                        <a href="/login" class="btn btn-outline-primary">Login to Request Refrigerator Repair</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- House Cleaning Service Card -->
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="static/House Cleaning.jpg" class="card-img-top" alt="House Cleaning">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">House Cleaning</h5>
+                        <a href="/login" class="btn btn-outline-primary">Login to Request House Cleaning</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bathroom Cleaning Service Card -->
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="static/Bathroom Cleaning.jpg" class="card-img-top" alt="Bathroom Cleaning">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bathroom Cleaning</h5>
+                        <a href="/login" class="btn btn-outline-primary">Login to Request Bathroom Cleaning</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fan Repair Service Card -->
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="static/Fan Repair.jpg" class="card-img-top" alt="Fan Repair">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Fan Repair</h5>
+                        <a href="/login" class="btn btn-outline-primary">Login to Request Fan Repair</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Renovation & Painting Service Card -->
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="static/paint.jpg" class="card-img-top" alt="Renovation & Painting">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Renovation & Painting</h5>
+                        <a href="/login" class="btn btn-outline-primary">Login to Request Renovation & Painting</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (optional for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

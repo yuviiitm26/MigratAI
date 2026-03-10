@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .header { background-color: #275689; color: #fff; padding: 15px 20px; text-align: center; }
+        .container { margin: 20px; }
+        .card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        h2 { margin-top: 0; }
+        input[type="text"], input[type="number"], select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+        button { background-color: #312f2f; color: #fff; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #555; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 15px; text-align: left; }
+        th { background-color: #333; color: white; }
+        .action-buttons { display: flex; gap: 10px; }
+        .action-buttons button { padding: 5px 10px; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Package Details</h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop over packages -->
+                {% for package in packages %}
+                <tr>
+                    <td>{{ package.name }}</td>
+                    <td>{{ package.details }}</td>
+                    <td>{{ package.price }}</td>
+                    <td>
+                        <!-- Service request form for each package -->
+                        <form method="POST" action="{{ url_for('servicerequest') }}">
+                            <input type="hidden" name="service_id" value="{{ service.id }}">
+                            <input type="hidden" name="package_id" value="{{ package.id }}">
+                            <div class="form-group">
+                                <label for="remarks_{{ package.id }}">Remarks:</label>
+                                <textarea name="remarks" id="remarks_{{ package.id }}" class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Request</button>
+                            {% endfor %}
+                            
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Optional: Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

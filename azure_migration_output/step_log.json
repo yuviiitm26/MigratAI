@@ -1,0 +1,32 @@
+{
+  "step_1_architect": {
+    "status": "passed",
+    "label": "Generate Dockerfile + Bicep",
+    "updated_at": "2026-03-10T09:50:57.363235",
+    "detail": "Dockerfile + main.bicep written to disk"
+  },
+  "step_2_risk": {
+    "status": "passed",
+    "label": "Security Scan + Governance Score",
+    "updated_at": "2026-03-10T09:51:34.629540",
+    "detail": "Risk=10 | Confidence=90 | Allowed=True"
+  },
+  "step_3_docker_build": {
+    "status": "passed",
+    "label": "Docker Build (Local)",
+    "updated_at": "2026-03-10T09:51:59.885720",
+    "detail": "Image built: themonkengineer/mad1:latest"
+  },
+  "step_4_docker_push": {
+    "status": "passed",
+    "label": "Docker Push (Docker Hub)",
+    "updated_at": "2026-03-10T09:53:01.605493",
+    "detail": "Pushed: themonkengineer/mad1:latest"
+  },
+  "step_5_azure_deploy": {
+    "status": "passed",
+    "label": "Azure Infrastructure Deploy",
+    "updated_at": "2026-03-10T09:56:20.952192",
+    "detail": "Deployed mad1 to MigratAI-RG"
+  }
+}
