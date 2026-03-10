@@ -1,2 +1,12 @@
-flask==2.3.2
-gunicorn==20.1.0
+# AI & Orchestration
+pyautogen==0.10.0
+openai==2.24.0
+
+# DevOps & Tooling
+docker==7.1.0
+checkov==3.2.506
+
+# Environment & Utils
+python-dotenv==1.2.1
+termcolor==2.3.0
+Flask==3.1.3
