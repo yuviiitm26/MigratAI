@@ -19,6 +19,8 @@ MigratAI introduces an automated workforce powered by **Microsoft AutoGen**. Ins
 
 ## 🧠 The Agentic Workforce (Architecture)
 
+![MigratAI Architecture Diagram](./architecture.png)
+
 Our system operates in a deterministic 5-step pipeline utilizing specialized agents:
 
 1. 🏗️ **The Architect Agent:** Analyzes local application code and autonomously generates the `Dockerfile` and Azure Infrastructure-as-Code.
