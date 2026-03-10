@@ -15,6 +15,10 @@ Migrating applications to the cloud is a highly manual process prone to infrastr
 ## 💡 The Solution: Agentic Resilience
 MigratAI introduces an automated workforce powered by **Microsoft AutoGen**. Instead of failing fast, our agents trap cloud errors, analyze the logs, rewrite the infrastructure code, and seamlessly retry the deployment—achieving **zero-touch recovery** at machine speed.
 
+## 📂 The Sample Workload (`/code`)
+This repository comes pre-packaged with a `code/` directory containing a sample Python Flask application. This serves as the **target workload** for the demo. 
+
+When you run the orchestrator, the **Architect Agent** reads directly from this local `code/` folder to understand the application's dependencies and automatically generate the necessary `Dockerfile` and infrastructure configurations. *(Note: You can swap out the contents of this folder with your own app to test the AI's adaptability!)*
 ---
 
 ## 🧠 The Agentic Workforce (Architecture)
@@ -42,12 +46,15 @@ If Azure rejects the deployment (e.g., an invalid `memory` limit or bad schema),
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Run (Getting Started)
 
-### Prerequisites
-* Python 3.9+
-* Docker Desktop (running locally)
-* Azure CLI (`az`) installed and authenticated
+To run this autonomous pipeline locally, your environment must meet a few specific constraints.
+
+### ⚠️ Prerequisites & Constraints
+1. **Python 3.9+** installed on your machine.
+2. **Docker Engine** must be installed and actively running in the background (e.g., Docker Desktop open).
+3. **Azure CLI (`az`)** installed locally.
+4. **Active Cloud Accounts:** You need an Azure Subscription (with permissions to create Resource Groups and Container Instances) and a Docker Hub account.
 
 ### 1. Clone the Repository
 ```bash
