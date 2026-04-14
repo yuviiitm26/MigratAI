@@ -1,5 +1,5 @@
 # ==========================================================
-# MigratAI - Step-by-Step Sequential A2A Pipeline
+# MigratAI - Step-by-Step Multi-Agent Conversational Pipeline
 # 
 # AGENT EXECUTION ORDER:
 # Step 1 → Architect    : Generate Dockerfile + Bicep
